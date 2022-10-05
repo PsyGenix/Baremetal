@@ -1,5 +1,5 @@
 # Baremetal
-Introduction to Arduino coding in c 
+Introduction to Arduino coding in C 
 
 Hello, welcome in! This repository aims to document my progress and aventures in the world of embedded systems. As it just so happens, I ahve decided to learn the inner workings of the arduino UNO!
 
