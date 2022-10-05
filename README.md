@@ -18,6 +18,6 @@ I highly reccomend reading it as it does provide a lot of valuable information.H
 * & - and
 * ^ - XOR (Exclusive or) 
 * ~ - Complement operator (inversion)
-—
+\
 I found this article particularly helpful : https://www.programiz.com/c-programming/bitwise-operators 
 
