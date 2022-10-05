@@ -14,14 +14,16 @@ Okie dokie! we're off to the races then; my initial exposure to the topic at han
 I highly reccomend reading it as it does provide a lot of valuable information.However, it left me with more questions than answers! Not to mention my confusion at the syntax being the first time I saw bitwise operators in use. 
 
 # Operators
-* | - or
-* & - and
-* ^ - XOR (Exclusive or) 
-* ~ - Complement operator (inversion)
+>* | - or
+>* & - and
+>* ^ - XOR (Exclusive or) 
+>* ~ - Complement operator (inversion)
 \
 I found this article particularly helpful : https://www.programiz.com/c-programming/bitwise-operators 
 # Schematic
 Referring back to the first article I linked to; there is a schematic diagram shown of the arduino. Unforunately, I was not able to get a good view from 
 the website provided. I reccomend visiting here instead for a larger image: https://electronicscheme.net/arduino-uno/arduino-uno-schematic/ simply click the image for an expanded view.
-
+# Coding
+Finally! Let's write some C; There are a couple of important things to know here and are as follows:
+* 
 
