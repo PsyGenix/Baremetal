@@ -14,8 +14,8 @@ Okie dokie! we're off to the races then; my initial exposure to the topic at han
 I highly reccomend reading it as it does provide a lot of valuable information.However, it left me with more questions than answers! Not to mention my confusion at the syntax being the first time I saw bitwise operators in use. 
 
 # Operators
-| - or
-& - and
-^ - XOR (Exclusive or) 
-~ - Complement operator (inversion)
-Visit >> For a comprehensive understanding : https://www.programiz.com/c-programming/bitwise-operators 
+* | - or
+* & - and
+* ^ - XOR (Exclusive or) 
+* ~ - Complement operator (inversion)
+* Visit >> For a comprehensive understanding : https://www.programiz.com/c-programming/bitwise-operators 
