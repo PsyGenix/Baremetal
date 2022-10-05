@@ -18,5 +18,10 @@ I highly reccomend reading it as it does provide a lot of valuable information.H
 * & - and
 * ^ - XOR (Exclusive or) 
 * ~ - Complement operator (inversion)
-\ I found this article particularly helpful : https://www.programiz.com/c-programming/bitwise-operators 
+\ 
+I found this article particularly helpful : https://www.programiz.com/c-programming/bitwise-operators 
+
+# Schematic
+Referring back to the first article I linked to; there is a schematic diagram shown of the arduino. Unforunately, I was not able to get a good view from the website provided. I reccomend visiting here instead for a good reference: https://electronicscheme.net/arduino-uno/arduino-uno-schematic/
+
 
