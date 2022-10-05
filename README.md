@@ -9,3 +9,6 @@ Prerequisite knowledge:
 > A decent grasp of the c programming langage, although I suppose one could follow along with minimal exposure;
 > Knowledge of bitwise operations and logic gates
 
+# Start
+Okie dokie! we're off to the races then; my initial exposure to the topic at hand began at this article: https://create.arduino.cc/projecthub/milanistef/introduction-to-bare-metal-programming-in-arduino-uno-f3e2b4 
+I highly reccomend reading it as it does provide a lot of valuable information.However, it left me with more questions than answers!
