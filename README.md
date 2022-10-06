@@ -25,4 +25,5 @@ Referring back to the first article I linked to; there is a schematic diagram sh
 the website provided. I reccomend visiting here instead for a larger image: https://electronicscheme.net/arduino-uno/arduino-uno-schematic/ simply click the image for an expanded view.
 # Coding
 Finally! Let's write some C; There are a couple of important things to know here and are as follows:
-
+* Notes : /dev/ttyUSB* or /dev/ttyACM*
+* To be cont.
