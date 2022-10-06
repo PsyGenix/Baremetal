@@ -21,14 +21,14 @@ int main(int argc,char *argv[])
 	 */
 	
 	//Setup goes here
-	DATA_DIR_REGB |= 1<<5;
+	DATA_DIR_REGB |= 1<<5; //DDR bit 5 set to high signalling pin to be used as input
 	
 	
 	//loop
 	while (1)
 	{
 		CUST_PORT_B |= 1<<5; //set bit 5 to high
-		_delay_ms(1000); //3 second delay
+		_delay_ms(1000); //1 second delay
 		
 		CUST_PORT_B &= ~(1<<5); //set bit 5 only to low
 		_delay_ms(1000); //wait
