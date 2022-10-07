@@ -24,6 +24,8 @@ I found this article particularly helpful : https://www.programiz.com/c-programm
 Referring back to the first article I linked to; there is a schematic diagram shown of the arduino. Unforunately, I was not able to get a good view from 
 the website provided. I reccomend visiting here instead for a larger image: https://electronicscheme.net/arduino-uno/arduino-uno-schematic/ simply click the image for an expanded view.
 # Coding
-Finally! Let's write some C; There are a couple of important things to know here and are as follows:
-* Notes : /dev/ttyUSB* or /dev/ttyACM*
+Finally! Let's write some C; I will compare the code written in the tutorial given to what is in the BLINK folder:
+*  DDRB |= _BV(DDB5); All right let's break this syntax down; DDRB stands for "Data direction registry B". A register has a total of 8 bits that can be manipulated. In order to set physical pin13 as an output we need to flip the 5th bit of the register to 1. 
 * To be cont.
+
+ Notes : /dev/ttyUSB* or /dev/ttyACM*
