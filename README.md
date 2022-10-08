@@ -30,6 +30,12 @@ Finally! Let's write some C; I will compare the code written in the tutorial giv
 > volatile byte *DATADIRB = 0x24; This is the physical address in memory where DDRB is located on the ATMEGA328p. Please note at the beginning 
 > of the file that "byte" is defined as an unsigned char. By default, char is defined as a signed integer in c, this means only 7 bits are available 
 > In order make full use of the register we need an unsigned char type which allows us to manipulate all 8 bits in the register. If this is unclear feel free to do more research into signed/unsigned char and int types in c.
+> *DATADIRB |= 1<<5; This should be fairly straightforward, simply flip the 5th bit ONLY at the memory located pointed to by DATADIRB. It's noteworthy 
+> to recall that you are comparing whatever the current 8 states of the bits are in the register with whatever you shift with (1<<5). So for instance 
+> if the initial state of the reg was 0010 1100, the comparision would look something like: 0010 1100 | 0011 1100 ; which would result in the fifth bit being turned on; 
+> This can be shortened into : * ((volatile byte*) 0x24) |= 1<<5; Looks Scary I know, but fear not it's just scary at first sight.
+> let's break it down, (volatile byte*) 0x24 - This is typcasting the defined data type "byte" as a pointer to the memory location 0x24. Just like if you were doing: char x = (char) a where a can be an int being typcasted into a char. So we typcast, then we dereference : *((xx*)0x24) then carry out the bitwise operation to flip the fifth bit. Finally, This bit of code is thrown into a #Define statement and hopefully you can read the code and sort the rest out yourself for portb as well.
+> cont.
  
 
  Notes : /dev/ttyUSB* or /dev/ttyACM*
