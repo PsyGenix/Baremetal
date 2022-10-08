@@ -6,7 +6,7 @@ Hello, welcome in! This repository aims to document my progress and aventures in
 Prerequisite knowledge:
 > A fundamental understanding of how base 2 works,
 > A fundamental understanding of base 16,
-> A decent grasp of the c programming langage, although I suppose one could follow along with minimal exposure;
+> A decent grasp of the c programming langage, particularly a good understanding of pointers, type casting and compiler macros,
 > Knowledge of bitwise operations and logic gates.
 
 # Start
@@ -25,7 +25,7 @@ Referring back to the first article I linked to; there is a schematic diagram sh
 the website provided. I reccomend visiting here instead for a larger image: https://electronicscheme.net/arduino-uno/arduino-uno-schematic/ simply click the image for an expanded view.
 # Coding
 Finally! Let's write some C; I will compare the code written in the tutorial given to what is in the BLINK folder:
-* [ DDRB |= _BV(DDB5); ] All right let's break this syntax down; DDRB stands for "Data direction registry B". A register has a total of 8 bits that can be manipulated. In order to set physical pin13 as an output we need to flip the 5th bit of the register to 1. What about the "|="? This is just shorthand and is equivalent to : [ DDRB = DDRB _BV(DDB5); ] I assume if you've been coding for a while you're already familiar with shorthands in the form of +=, -= etc. The _BV(DDB5) part is a predefined compiler macro. It's defined as: #Define _BV(bit) (1 << (bit)). If you aren't familiar with #Define I suggest doing some additional research
+* [ DDRB |= _BV(DDB5); ] All right let's break this syntax down; DDRB stands for "Data direction registry B". A register has a total of 8 bits that can be manipulated. In order to set physical pin13 as an output we need to flip the 5th bit of the register to 1. What about the "|="? This is just shorthand and is equivalent to : [ DDRB = DDRB _BV(DDB5); ] I assume if you've been coding for a while you're already familiar with shorthands in the form of +=, -= etc. The _BV(DDB5) part is a predefined compiler macro. It's defined as: #Define _BV(bit) (1 << (bit)). If you aren't familiar with #Define I suggest doing some additional research. I assume you've read the article on bitwise operations at this point and should understand how the |(OR),&(AND) and ~(Bitwise Complement/Inversion) work. So DDRB = DDRB + _BV(DDB5) is equivalent to: DDRB = DDRB + (1<<5); 
 * To be cont.
 
  Notes : /dev/ttyUSB* or /dev/ttyACM*
