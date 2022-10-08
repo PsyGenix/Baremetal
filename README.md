@@ -26,10 +26,10 @@ the website provided. I reccomend visiting here instead for a larger image: http
 # Coding
 Finally! Let's write some C; I will compare the code written in the tutorial given to what is in the BLINK folder:
 * [ DDRB |= _BV(DDB5); ] All right let's break this syntax down; DDRB stands for "Data direction registry B". A register has a total of 8 bits that can be manipulated. In order to set physical pin13 as an output we need to flip the 5th bit of the register to 1. What about the "|="? This is just shorthand and is equivalent to : [ DDRB = DDRB _BV(DDB5); ] I assume if you've been coding for a while you're already familiar with shorthands in the form of +=, -= etc. The _BV(DDB5) part is a predefined compiler macro. It's defined as: #Define _BV(bit) (1 << (bit)). If you aren't familiar with #Define I suggest doing some additional research. I assume you've read the article on bitwise operations at this point and should understand how the |(OR),&(AND) and ~(Bitwise Complement/Inversion) work. So DDRB |= _BV(DDB5) is equivalent to: DDRB |= (1<<5);  
-* I wanted to understand fully what was going on under the hood, so I did a bit more digging and found:
-* volatile byte *DATADIRB = 0x24; This is the physical address in memory where DDRB is located on the ATMEGA328p. Please note at the beginning 
-* of the file that "byte" is defined as an unsigned char. By default, char is defined as a signed integer in c, this means only 7 bits are available 
-* In order make full use of the register we need an unsigned char type which allows us to manipulate all 8 bits in the register. If this is unclear feel free to do more research into signed/unsigned char and int types in c.
-* 
+> I wanted to understand fully what was going on under the hood, so I did a bit more digging and found:
+> volatile byte *DATADIRB = 0x24; This is the physical address in memory where DDRB is located on the ATMEGA328p. Please note at the beginning 
+> of the file that "byte" is defined as an unsigned char. By default, char is defined as a signed integer in c, this means only 7 bits are available 
+> In order make full use of the register we need an unsigned char type which allows us to manipulate all 8 bits in the register. If this is unclear feel free to do more research into signed/unsigned char and int types in c.
+ 
 
  Notes : /dev/ttyUSB* or /dev/ttyACM*
